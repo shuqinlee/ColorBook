@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="pWw-YH-PRb">
@@ -25,177 +30,199 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="ivu-Cq-RbD" kind="relationship" relationship="rootViewController" id="svU-KI-tKp"/>
+                        <segue destination="1Q0-ha-SKA" kind="relationship" relationship="rootViewController" id="rpm-4m-Olp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NH0-l9-aLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276" y="5"/>
+            <point key="canvasLocation" x="-663" y="803"/>
         </scene>
-        <!--Painting Books-->
-        <scene sceneID="Ddn-Jb-ueW">
+        <!--Book Collection View Controller-->
+        <scene sceneID="1EK-h1-RdA">
             <objects>
-                <collectionViewController id="ivu-Cq-RbD" customClass="BookCollectionViewController" customModule="ColorBook2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mxj-Rz-LJp">
+                <viewController id="1Q0-ha-SKA" customClass="BookCollectionViewController" customModule="ColorBook2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BbH-LS-OAo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M2E-o2-xxl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0iF-Jp-sES">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="NewBookCell" id="U0D-L7-3bn" customClass="NewBookViewCell" customModule="ColorBook2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lIs-ry-5bp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="lIs-ry-5bp" firstAttribute="leading" secondItem="U0D-L7-3bn" secondAttribute="leading" id="68B-Ae-AWJ"/>
+                                            <constraint firstItem="lIs-ry-5bp" firstAttribute="top" secondItem="U0D-L7-3bn" secondAttribute="top" id="B8c-hu-mQI"/>
+                                            <constraint firstAttribute="bottom" secondItem="lIs-ry-5bp" secondAttribute="bottom" id="DfP-rU-t0A"/>
+                                            <constraint firstAttribute="trailing" secondItem="lIs-ry-5bp" secondAttribute="trailing" id="wK6-YY-qze"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="125"/>
+                                        <connections>
+                                            <outlet property="coverView" destination="lIs-ry-5bp" id="DjY-Lz-XEW"/>
+                                            <segue destination="ASq-9B-aDu" kind="presentation" identifier="newBookSegue" id="02s-uB-OaG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="BookCell" id="3Ij-RL-tmR" customClass="BookCollectionViewCell" customModule="ColorBook2" customModuleProvider="target">
+                                        <rect key="frame" x="137.5" y="0.0" width="100" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QcC-ae-IyF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJd-K9-sUn">
+                                                    <rect key="frame" x="23.5" y="48" width="54.5" height="29"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.95317390584116057" green="0.98712759067357514" blue="0.97871009959456456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="aJd-K9-sUn" firstAttribute="centerX" secondItem="3Ij-RL-tmR" secondAttribute="centerX" id="1HH-Re-gkc"/>
+                                            <constraint firstAttribute="bottom" secondItem="QcC-ae-IyF" secondAttribute="bottom" id="5Cc-Ag-Ls4"/>
+                                            <constraint firstAttribute="trailing" secondItem="QcC-ae-IyF" secondAttribute="trailing" id="LbM-Xx-aOK"/>
+                                            <constraint firstItem="QcC-ae-IyF" firstAttribute="leading" secondItem="3Ij-RL-tmR" secondAttribute="leading" id="R9k-b1-ZFD"/>
+                                            <constraint firstItem="aJd-K9-sUn" firstAttribute="centerY" secondItem="3Ij-RL-tmR" secondAttribute="centerY" id="gml-O3-q28"/>
+                                            <constraint firstItem="QcC-ae-IyF" firstAttribute="top" secondItem="3Ij-RL-tmR" secondAttribute="top" id="uIt-kg-2o3"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="125"/>
+                                        <connections>
+                                            <outlet property="bookName" destination="aJd-K9-sUn" id="teI-97-qcT"/>
+                                            <outlet property="coverView" destination="QcC-ae-IyF" id="mUN-fN-3aj"/>
+                                            <segue destination="Jcz-yT-fRf" kind="show" identifier="showPaintingControllerSegue" id="Pmc-Dt-VSp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Q0-ha-SKA" id="5Ue-Qp-KG6"/>
+                                    <outlet property="delegate" destination="1Q0-ha-SKA" id="xTZ-uC-MgS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FWL-Rf-316">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="NewBookCell" id="R6F-Cz-Zd2" customClass="NewBookViewCell" customModule="ColorBook2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qD6-zF-Plh">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="qD6-zF-Plh" firstAttribute="leading" secondItem="R6F-Cz-Zd2" secondAttribute="leading" id="3gq-Xw-RZP"/>
-                                    <constraint firstAttribute="trailing" secondItem="qD6-zF-Plh" secondAttribute="trailing" id="EW3-EG-3dZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="qD6-zF-Plh" secondAttribute="bottom" id="GQB-VO-1te"/>
-                                    <constraint firstItem="qD6-zF-Plh" firstAttribute="top" secondItem="R6F-Cz-Zd2" secondAttribute="top" id="PG1-KW-6QQ"/>
-                                </constraints>
-                                <size key="customSize" width="100" height="125"/>
-                                <connections>
-                                    <outlet property="coverView" destination="qD6-zF-Plh" id="KXs-bI-JOl"/>
-                                </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="BookCell" id="dhA-HG-ORQ" customClass="BookCollectionViewCell" customModule="ColorBook2" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="0.0" width="100" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9Y-Pm-ebb">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-0a-s0V">
-                                            <rect key="frame" x="23.5" y="48" width="54.5" height="29"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Label">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.95317390584116057" green="0.98712759067357514" blue="0.97871009959456456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="BodoniSvtyTwoSCITCTT-Book"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="O9Y-Pm-ebb" firstAttribute="top" secondItem="dhA-HG-ORQ" secondAttribute="top" id="5y1-GC-cqx"/>
-                                    <constraint firstItem="nOw-0a-s0V" firstAttribute="centerX" secondItem="dhA-HG-ORQ" secondAttribute="centerX" id="FnT-7n-hNJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="O9Y-Pm-ebb" secondAttribute="bottom" id="GRr-mF-QAL"/>
-                                    <constraint firstAttribute="trailing" secondItem="O9Y-Pm-ebb" secondAttribute="trailing" id="QaX-Zk-jLL"/>
-                                    <constraint firstItem="nOw-0a-s0V" firstAttribute="centerY" secondItem="dhA-HG-ORQ" secondAttribute="centerY" id="Qdq-C0-FE5"/>
-                                    <constraint firstItem="O9Y-Pm-ebb" firstAttribute="leading" secondItem="dhA-HG-ORQ" secondAttribute="leading" id="x8l-X4-EOG"/>
-                                </constraints>
-                                <size key="customSize" width="100" height="125"/>
-                                <connections>
-                                    <outlet property="bookName" destination="nOw-0a-s0V" id="2QQ-uX-XhX"/>
-                                    <outlet property="coverView" destination="O9Y-Pm-ebb" id="0p8-B5-Nq6"/>
-                                    <segue destination="cv8-ZJ-e6W" kind="show" identifier="showPaintingControllerSegue" id="rfd-SQ-34a"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="ivu-Cq-RbD" id="MWX-I6-N8F"/>
-                            <outlet property="delegate" destination="ivu-Cq-RbD" id="Km8-Pk-0gS"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Painting Books" leftItemsSupplementBackButton="YES" id="OYb-eW-Pod">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="xtR-ZL-e9Y"/>
-                    </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wls-c8-DCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="LSp-c6-9E7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kpn-ye-TdN"/>
+                    <connections>
+                        <outlet property="collectionView" destination="M2E-o2-xxl" id="f1g-Ny-Apx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVp-KH-hqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402.39999999999998" y="4.9475262368815596"/>
+            <point key="canvasLocation" x="207" y="803"/>
         </scene>
         <!--Painting Collection View Controller-->
-        <scene sceneID="piX-su-kND">
+        <scene sceneID="Det-6i-a8A">
             <objects>
-                <collectionViewController id="cv8-ZJ-e6W" customClass="PaintingCollectionViewController" customModule="ColorBook2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="32b-7c-I4S">
+                <viewController id="Jcz-yT-fRf" customClass="PaintingCollectionViewController" customModule="ColorBook2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIe-Ct-L1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-yr-Wwj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p8H-Bh-rwQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="NewPaintingCell" id="wbw-ox-T3b" customClass="NewPaintingViewCell" customModule="ColorBook2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="109" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-6U-Z2B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DIH-6U-Z2B" secondAttribute="trailing" id="DHK-Ct-NC9"/>
+                                            <constraint firstAttribute="bottom" secondItem="DIH-6U-Z2B" secondAttribute="bottom" id="XOu-4h-CuR"/>
+                                            <constraint firstItem="DIH-6U-Z2B" firstAttribute="top" secondItem="wbw-ox-T3b" secondAttribute="top" id="e7o-1S-pch"/>
+                                            <constraint firstItem="DIH-6U-Z2B" firstAttribute="leading" secondItem="wbw-ox-T3b" secondAttribute="leading" id="yUB-Gz-UMu"/>
+                                        </constraints>
+                                        <size key="customSize" width="109" height="141"/>
+                                        <connections>
+                                            <outlet property="coverView" destination="DIH-6U-Z2B" id="hnf-Ub-zdf"/>
+                                            <segue destination="wuA-tS-whK" kind="presentation" identifier="chooseImageSegue" id="p3l-HK-dv5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PaintingCell" id="2Zu-QG-wvh" customClass="PaintingCollectionViewCell" customModule="ColorBook2" customModuleProvider="target">
+                                        <rect key="frame" x="119" y="0.0" width="117" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-DR-FeI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="143"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ds2-DR-FeI" secondAttribute="bottom" id="MQp-1s-qBF"/>
+                                            <constraint firstItem="ds2-DR-FeI" firstAttribute="leading" secondItem="2Zu-QG-wvh" secondAttribute="leading" id="PQ7-0c-hAX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ds2-DR-FeI" secondAttribute="trailing" id="gal-R2-DaW"/>
+                                            <constraint firstItem="ds2-DR-FeI" firstAttribute="top" secondItem="2Zu-QG-wvh" secondAttribute="top" id="hJX-Nj-FCW"/>
+                                        </constraints>
+                                        <size key="customSize" width="117" height="143"/>
+                                        <connections>
+                                            <outlet property="coverView" destination="ds2-DR-FeI" id="Px3-US-wLP"/>
+                                            <segue destination="Wm7-Po-B2J" kind="presentation" identifier="showPaintingPanelSegue" id="8iG-cW-Kpn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jcz-yT-fRf" id="GS4-bi-3qd"/>
+                                    <outlet property="delegate" destination="Jcz-yT-fRf" id="Wjr-6a-bCw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GoN-sr-KaV">
-                            <size key="itemSize" width="109" height="141"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="NewPaintingCell" id="lOb-Wg-e3D" customClass="NewPaintingViewCell" customModule="ColorBook2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmy-Vd-AGg">
-                                            <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="cmy-Vd-AGg" secondAttribute="bottom" id="3Xx-wI-d2d"/>
-                                    <constraint firstItem="cmy-Vd-AGg" firstAttribute="leading" secondItem="lOb-Wg-e3D" secondAttribute="leading" id="OiU-ya-Mdx"/>
-                                    <constraint firstAttribute="trailing" secondItem="cmy-Vd-AGg" secondAttribute="trailing" id="X8h-iI-nbf"/>
-                                    <constraint firstItem="cmy-Vd-AGg" firstAttribute="top" secondItem="lOb-Wg-e3D" secondAttribute="top" id="aJr-ap-Qab"/>
-                                </constraints>
-                                <size key="customSize" width="109" height="141"/>
-                                <connections>
-                                    <outlet property="coverView" destination="cmy-Vd-AGg" id="7d8-n8-gGS"/>
-                                    <segue destination="wuA-tS-whK" kind="presentation" identifier="chooseImageSegue" id="JrC-VK-068"/>
-                                </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PaintingCell" id="c1O-r4-5sj" customClass="PaintingCollectionViewCell" customModule="ColorBook2" customModuleProvider="target">
-                                <rect key="frame" x="133" y="0.0" width="109" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZu-aL-uPN">
-                                            <rect key="frame" x="0.0" y="0.0" width="109" height="141"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yZu-aL-uPN" secondAttribute="bottom" id="BG2-lv-ba8"/>
-                                    <constraint firstItem="yZu-aL-uPN" firstAttribute="leading" secondItem="c1O-r4-5sj" secondAttribute="leading" id="HQH-jf-D8K"/>
-                                    <constraint firstItem="yZu-aL-uPN" firstAttribute="top" secondItem="c1O-r4-5sj" secondAttribute="top" id="QUA-z8-rTd"/>
-                                    <constraint firstAttribute="trailing" secondItem="yZu-aL-uPN" secondAttribute="trailing" id="hzx-aC-brZ"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="coverView" destination="yZu-aL-uPN" id="Bhn-Ao-nzt"/>
-                                    <segue destination="Wm7-Po-B2J" kind="presentation" identifier="showPaintingPanelSegue" id="Kd3-fy-V1U"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="cv8-ZJ-e6W" id="Ib3-1L-3KC"/>
-                            <outlet property="delegate" destination="cv8-ZJ-e6W" id="xHb-G5-sHY"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w00-8n-Ppz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="JvP-CE-q3m"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ULR-yr-Wwj" id="7Js-rX-jM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXa-9p-VLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.80000000000001" y="4.9475262368815596"/>
+            <point key="canvasLocation" x="1311" y="803"/>
         </scene>
         <!--Title-->
         <scene sceneID="JP9-DR-WfM">
@@ -279,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCx-go-VbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="409.7451274362819"/>
+            <point key="canvasLocation" x="2350" y="1254"/>
         </scene>
         <!--Edit-->
         <scene sceneID="kc8-Tq-FSq">
@@ -318,7 +345,101 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1236" y="-355.7721139430285"/>
+            <point key="canvasLocation" x="2398" y="496"/>
+        </scene>
+        <!--NewBookViewController-->
+        <scene sceneID="qiz-ND-VhX">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="ASq-9B-aDu" userLabel="NewBookViewController" customClass="NewBookViewController" customModule="ColorBook2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZZ-LV-eLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-w8-thY">
+                                <rect key="frame" x="0.0" y="54" width="375" height="517"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-Oj-pu4">
+                                <rect key="frame" x="0.0" y="-24" width="376" height="78"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <color key="barTintColor" red="0.98038417099999997" green="0.84838747979999996" blue="0.32342427969999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="New Book" prompt="   " id="Y2P-Dw-MkT">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fg5-Vz-Y4C">
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onCancelButtonTapped:" destination="ASq-9B-aDu" id="gSw-yw-dOi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="SoV-tC-yjk">
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onSaveButtonTapped:" destination="ASq-9B-aDu" id="6GZ-DD-EwD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5pL-4x-zio">
+                                <rect key="frame" x="0.0" y="579" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q8p-sI-Tiz">
+                                    <size key="itemSize" width="86" height="87"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookImageCell" id="73q-DX-sCk" userLabel="BookImageCollectionViewCell" customClass="BookImageCollectionViewCell" customModule="ColorBook2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="86" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="86" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1q-wZ-OjK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="87"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="t1q-wZ-OjK" id="b88-tu-cQT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Color book" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-pk-Aaq">
+                                <rect key="frame" x="66" y="285" width="244" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.85702639818191528" blue="0.047031775116920471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.034427623060000002" green="0.01641751177" blue="0.01538289145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PGa-Zg-AGI"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bookNameTextField" destination="T0W-pk-Aaq" id="4pE-U9-eCY"/>
+                        <outlet property="collectionView" destination="5pL-4x-zio" id="4W7-jj-0uD"/>
+                        <outlet property="imageView" destination="ZhP-w8-thY" id="3OW-GV-uXn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4a7-ah-zoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696.79999999999995" y="1607.9460269865069"/>
         </scene>
     </scenes>
     <resources>

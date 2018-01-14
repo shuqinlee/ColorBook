@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PaintingPanelViewController: UIViewController {
+class PaintingPanelViewController: UIViewController,
+                                    UINavigationControllerDelegate {
 
     // MARK: - outlet property
     @IBOutlet weak var mainImageView: UIImageView!
@@ -26,16 +27,10 @@ class PaintingPanelViewController: UIViewController {
         if let view = sender.view {
             view.transform = view.transform.scaledBy(x: scale, y: scale)
             sender.scale = 1
-            
-            
         }
-        if sender.state == .ended  {
-            print("pinched eneded")
-            print(sender.velocity)
-            // show
-//            self.navigationController?.popViewController(animated: false)
-            
-            self.navigationController?.dismiss(animated: true, completion: nil)
+        if sender.state == .ended && sender.velocity < -4  {
+            print("Pinched eneded, velocity: \(sender.velocity), closing")
+            dismiss(animated: true, completion: nil)
         }
     }
     

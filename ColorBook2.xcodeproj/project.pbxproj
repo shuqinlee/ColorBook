@@ -16,6 +16,19 @@
 		D660D107200B3CF80078839B /* RawBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D106200B3CF80078839B /* RawBook.swift */; };
 		D660D109200B3D040078839B /* RawPainting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D108200B3D040078839B /* RawPainting.swift */; };
 		D660D10B200B40890078839B /* EntityTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D10A200B40890078839B /* EntityTrans.swift */; };
+		D660D121200BA9F00078839B /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D120200BA9F00078839B /* NewBookViewController.swift */; };
+		D660D123200BAA350078839B /* BookImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D122200BAA350078839B /* BookImageCollectionViewCell.swift */; };
+		D660D130200BB0170078839B /* elephant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D125200BAFFA0078839B /* elephant.jpg */; };
+		D660D131200BB0170078839B /* fox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D126200BAFFA0078839B /* fox.jpg */; };
+		D660D132200BB0170078839B /* hedgehogs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D127200BAFFA0078839B /* hedgehogs.jpg */; };
+		D660D133200BB0170078839B /* monkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D128200BAFFA0078839B /* monkey.jpg */; };
+		D660D134200BB0170078839B /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D660D129200BAFFA0078839B /* mountain.png */; };
+		D660D135200BB0170078839B /* mouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12A200BAFFA0078839B /* mouse.jpg */; };
+		D660D136200BB0170078839B /* owl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12B200BAFFA0078839B /* owl.jpg */; };
+		D660D137200BB0170078839B /* rabbit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12C200BAFFA0078839B /* rabbit.jpg */; };
+		D660D138200BB0170078839B /* tortoise.gif in Resources */ = {isa = PBXBuildFile; fileRef = D660D12D200BAFFA0078839B /* tortoise.gif */; };
+		D660D139200BB0170078839B /* winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12E200BAFFA0078839B /* winter.jpg */; };
+		D660D13A200BB0170078839B /* witch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12F200BAFFA0078839B /* witch.jpg */; };
 		D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */; };
 		D6A32F931FDE80EF004BDE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F911FDE80EF004BDE36 /* Main.storyboard */; };
 		D6A32F951FDE80EF004BDE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F941FDE80EF004BDE36 /* Assets.xcassets */; };
@@ -70,6 +83,19 @@
 		D660D106200B3CF80078839B /* RawBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawBook.swift; sourceTree = "<group>"; };
 		D660D108200B3D040078839B /* RawPainting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawPainting.swift; sourceTree = "<group>"; };
 		D660D10A200B40890078839B /* EntityTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTrans.swift; sourceTree = "<group>"; };
+		D660D120200BA9F00078839B /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
+		D660D122200BAA350078839B /* BookImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D660D125200BAFFA0078839B /* elephant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elephant.jpg; sourceTree = "<group>"; };
+		D660D126200BAFFA0078839B /* fox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpg; sourceTree = "<group>"; };
+		D660D127200BAFFA0078839B /* hedgehogs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hedgehogs.jpg; sourceTree = "<group>"; };
+		D660D128200BAFFA0078839B /* monkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monkey.jpg; sourceTree = "<group>"; };
+		D660D129200BAFFA0078839B /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain.png; sourceTree = "<group>"; };
+		D660D12A200BAFFA0078839B /* mouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mouse.jpg; sourceTree = "<group>"; };
+		D660D12B200BAFFA0078839B /* owl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = owl.jpg; sourceTree = "<group>"; };
+		D660D12C200BAFFA0078839B /* rabbit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rabbit.jpg; sourceTree = "<group>"; };
+		D660D12D200BAFFA0078839B /* tortoise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tortoise.gif; sourceTree = "<group>"; };
+		D660D12E200BAFFA0078839B /* winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winter.jpg; sourceTree = "<group>"; };
+		D660D12F200BAFFA0078839B /* witch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = witch.jpg; sourceTree = "<group>"; };
 		D6A32F8A1FDE80EF004BDE36 /* ColorBook2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBook2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A32F921FDE80EF004BDE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,13 +207,34 @@
 				D6F74B732003DA030020065C /* NewBookViewCell.swift */,
 				D6A32FCC1FDEF606004BDE36 /* BookCollectionViewCell.swift */,
 				D6B793BE2003AE95007B3C49 /* PaintingCollectionViewCell.swift */,
+				D660D122200BAA350078839B /* BookImageCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D660D124200BAFFA0078839B /* image_res */ = {
+			isa = PBXGroup;
+			children = (
+				D660D125200BAFFA0078839B /* elephant.jpg */,
+				D660D126200BAFFA0078839B /* fox.jpg */,
+				D660D127200BAFFA0078839B /* hedgehogs.jpg */,
+				D660D128200BAFFA0078839B /* monkey.jpg */,
+				D660D129200BAFFA0078839B /* mountain.png */,
+				D660D12A200BAFFA0078839B /* mouse.jpg */,
+				D660D12B200BAFFA0078839B /* owl.jpg */,
+				D660D12C200BAFFA0078839B /* rabbit.jpg */,
+				D660D12D200BAFFA0078839B /* tortoise.gif */,
+				D660D12E200BAFFA0078839B /* winter.jpg */,
+				D660D12F200BAFFA0078839B /* witch.jpg */,
+			);
+			name = image_res;
+			path = ../../../Design/image_res;
 			sourceTree = "<group>";
 		};
 		D6A32F811FDE80EF004BDE36 = {
 			isa = PBXGroup;
 			children = (
+				D660D124200BAFFA0078839B /* image_res */,
 				D607F1C02004A99F0005AE5E /* picture icon.png */,
 				D607F1BE2004A8130005AE5E /* gray camera.png */,
 				D6D766752003BBD0006B718E /* newImgView.png */,
@@ -253,6 +300,7 @@
 				D62EBF1A2000E43600B6FA88 /* PaintingCollectionViewController.swift */,
 				D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */,
 				D6A34EA9200725D0004647AB /* PaintingPanelViewController.swift */,
+				D660D120200BA9F00078839B /* NewBookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -367,6 +415,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D660D130200BB0170078839B /* elephant.jpg in Resources */,
+				D660D131200BB0170078839B /* fox.jpg in Resources */,
+				D660D132200BB0170078839B /* hedgehogs.jpg in Resources */,
+				D660D133200BB0170078839B /* monkey.jpg in Resources */,
+				D660D134200BB0170078839B /* mountain.png in Resources */,
+				D660D135200BB0170078839B /* mouse.jpg in Resources */,
+				D660D136200BB0170078839B /* owl.jpg in Resources */,
+				D660D137200BB0170078839B /* rabbit.jpg in Resources */,
+				D660D138200BB0170078839B /* tortoise.gif in Resources */,
+				D660D139200BB0170078839B /* winter.jpg in Resources */,
+				D660D13A200BB0170078839B /* witch.jpg in Resources */,
 				D607F1C12004A99F0005AE5E /* picture icon.png in Resources */,
 				D607F1BF2004A8130005AE5E /* gray camera.png in Resources */,
 				D6D766762003BBD1006B718E /* newImgView.png in Resources */,
@@ -423,6 +482,7 @@
 				"${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -430,6 +490,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVGPUImage2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -461,6 +522,7 @@
 				D6F74B742003DA030020065C /* NewBookViewCell.swift in Sources */,
 				D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */,
 				D62EBF1B2000E43600B6FA88 /* PaintingCollectionViewController.swift in Sources */,
+				D660D123200BAA350078839B /* BookImageCollectionViewCell.swift in Sources */,
 				D660D10B200B40890078839B /* EntityTrans.swift in Sources */,
 				D6A32FC71FDE8230004BDE36 /* Book.swift in Sources */,
 				D660D109200B3D040078839B /* RawPainting.swift in Sources */,
@@ -479,6 +541,7 @@
 				D6C85EBC20061EC9005ABEBE /* RealmUtil.swift in Sources */,
 				D6A32FC81FDE8230004BDE36 /* BookCollectionViewController.swift in Sources */,
 				D6B793BF2003AE95007B3C49 /* PaintingCollectionViewCell.swift in Sources */,
+				D660D121200BA9F00078839B /* NewBookViewController.swift in Sources */,
 				D6A32FCB1FDEEBD6004BDE36 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

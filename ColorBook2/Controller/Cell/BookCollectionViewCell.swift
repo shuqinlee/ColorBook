@@ -10,7 +10,7 @@ import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
     
-    var book: Book!
+    var book: Book! // rm
     var rawBook: RawBook!
     @IBOutlet weak var coverView: UIImageView!
     @IBOutlet weak var bookName: UILabel!

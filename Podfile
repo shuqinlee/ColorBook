@@ -7,6 +7,6 @@ target 'ColorBook2' do
   pod 'RealmSwift'
   pod 'EVGPUImage2'
   pod 'ChameleonFramework/Swift'
-
+  pod 'SlideMenuControllerSwift'
 
 end

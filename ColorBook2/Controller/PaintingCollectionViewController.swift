@@ -11,8 +11,11 @@ import RealmSwift
 
 private let reuseIdentifier = "PaintingCell"
 private let newPaintingIdentifier = "NewPaintingCell"
-class PaintingCollectionViewController: UICollectionViewController {
 
+class PaintingCollectionViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     var book: Book!
     var rawBook: RawBook!
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -21,9 +24,11 @@ class PaintingCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rawBook.paintingList = Realm2Raw.paintingList(paintingList: book.paintingList)
-        
-        
+        collectionView.delegate = self
+        if rawBook.paintingList.count == 0 && rawBook.book != nil {
+            book = rawBook.book
+            rawBook.paintingList = Realm2Raw.paintingList(paintingList: book.paintingList)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,19 +57,21 @@ class PaintingCollectionViewController: UICollectionViewController {
 extension PaintingCollectionViewController: ChooseImageViewControllerDelegate {
     func saveButtonDidTapped(viewController: ChooseImageViewController) {
         print("New painting account: \(rawBook.paintingList.count)")
-        collectionView?.reloadData()
+        collectionView.reloadData()
     }
 }
 
-extension PaintingCollectionViewController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension PaintingCollectionViewController:
+                        UICollectionViewDataSource,
+                        UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (rawBook.paintingList.count)  + 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let ind: Int = (indexPath as NSIndexPath).row
         
