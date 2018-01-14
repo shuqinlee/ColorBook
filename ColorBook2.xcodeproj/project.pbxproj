@@ -174,6 +174,17 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D660D11F200B73F70078839B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D6F74B712003D9CC0020065C /* NewPaintingViewCell.swift */,
+				D6F74B732003DA030020065C /* NewBookViewCell.swift */,
+				D6A32FCC1FDEF606004BDE36 /* BookCollectionViewCell.swift */,
+				D6B793BE2003AE95007B3C49 /* PaintingCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D6A32F811FDE80EF004BDE36 = {
 			isa = PBXGroup;
 			children = (
@@ -237,10 +248,7 @@
 		D6A32FC91FDE8278004BDE36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6F74B712003D9CC0020065C /* NewPaintingViewCell.swift */,
-				D6F74B732003DA030020065C /* NewBookViewCell.swift */,
-				D6A32FCC1FDEF606004BDE36 /* BookCollectionViewCell.swift */,
-				D6B793BE2003AE95007B3C49 /* PaintingCollectionViewCell.swift */,
+				D660D11F200B73F70078839B /* Cell */,
 				D6A32FC11FDE8230004BDE36 /* BookCollectionViewController.swift */,
 				D62EBF1A2000E43600B6FA88 /* PaintingCollectionViewController.swift */,
 				D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */,

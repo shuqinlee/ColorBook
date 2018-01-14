@@ -11,6 +11,7 @@ import UIKit
 class BookCollectionViewCell: UICollectionViewCell {
     
     var book: Book!
+    var rawBook: RawBook!
     @IBOutlet weak var coverView: UIImageView!
     @IBOutlet weak var bookName: UILabel!
     

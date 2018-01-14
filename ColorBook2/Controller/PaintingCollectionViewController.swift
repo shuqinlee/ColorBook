@@ -14,19 +14,16 @@ private let newPaintingIdentifier = "NewPaintingCell"
 class PaintingCollectionViewController: UICollectionViewController {
 
     var book: Book!
-//    var paintingList: Results<Painting>?
-    var paintingList: List<Painting>?
+    var rawBook: RawBook!
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow: CGFloat = 2
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        paintingList = book.paintingList
-//        let realm = try! Realm(configuration: Config.REALM_CONFIG)
-//        let predicate = NSPredicate(format: "book.id = %@", book.id!)
-//        self.paintingList = realm.objects(Painting.self).filter(predicate)
-
+        rawBook.paintingList = Realm2Raw.paintingList(paintingList: book.paintingList)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,13 +31,17 @@ class PaintingCollectionViewController: UICollectionViewController {
         if identifier == "chooseImageSegue" {
 //            segue.destination.title = "Choose Image"
             let chooseImageViewController = segue.destination as! ChooseImageViewController
-            chooseImageViewController.book = book
+            
+            chooseImageViewController.rawBook = rawBook
             chooseImageViewController.delegate = self
         } else if identifier == "showPaintingPanelSegue" {
             let paintingPanelVC = segue.destination as! PaintingPanelViewController
 //            paintingPanelVC
             if let sender = sender as? PaintingCollectionViewCell {
-                paintingPanelVC.painting = sender.painting
+                paintingPanelVC.painting = sender.painting // rm
+                
+                paintingPanelVC.paintingInd = sender.ind
+                paintingPanelVC.rawBook = rawBook
             }
         }
     }
@@ -50,7 +51,7 @@ class PaintingCollectionViewController: UICollectionViewController {
 
 extension PaintingCollectionViewController: ChooseImageViewControllerDelegate {
     func saveButtonDidTapped(viewController: ChooseImageViewController) {
-        print("New painting account: \(paintingList?.count ?? 0)")
+        print("New painting account: \(rawBook.paintingList.count)")
         collectionView?.reloadData()
     }
 }
@@ -60,7 +61,7 @@ extension PaintingCollectionViewController {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (paintingList?.count ?? 0)  + 1
+        return (rawBook.paintingList.count)  + 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -77,21 +78,21 @@ extension PaintingCollectionViewController {
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PaintingCollectionViewCell
-            let painting = paintingList![ind-1]
+            let painting = rawBook.paintingList[ind-1]
             var cover: UIImage!
             if let pp = painting.painting {
-                cover = UIImage(data: pp)
+                cover = pp
             } else if let pp = painting.raw {
-                cover = UIImage(data: pp)
+                cover = pp
             }
-//            let cover = UIImage(data: paintingList![ind-1].painting!)
             
-            cell.coverView.image = cover // ImageProcess.addBlurFilter(image: cover!)
-            cell.painting = paintingList![ind-1]
+            cell.coverView.image = cover
+            cell.rawPainting = rawBook.paintingList[ind-1]
+            cell.painting = rawBook.paintingList[ind-1].pp
+            cell.ind = ind - 1
             return cell
         }
     }
-    
 }
 
 extension PaintingCollectionViewController : UICollectionViewDelegateFlowLayout {

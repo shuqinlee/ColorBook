@@ -29,7 +29,7 @@ class RealmUtil {
         let realm = try! Realm(configuration: Config.REALM_CONFIG)
         // Persist your data easily
         realm.beginWrite()
-        realm.add(bookList)
+        realm.add(bookList, update: true)
         try! realm.commitWrite()
     }
     

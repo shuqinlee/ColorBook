@@ -8,22 +8,22 @@
 
 import UIKit
 import RealmSwift
-
+typealias BCVC = BookCollectionViewController
 class BookCollectionViewController: UICollectionViewController {
     
     fileprivate let reuseIdentifier = "BookCell"
     fileprivate let newBookIdentifier = "NewBookCell"
-    static var bookList:[RawBook]?// = LocalFileLoader.loadBookList()
+    static var bookList = [RawBook]()// = LocalFileLoader.loadBookList()
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow: CGFloat = 2
     
+    // MARK: - methods
     override func viewDidLoad() {
         title = "Books"
-//        let realm = try! Realm(configuration: Config.REALM_CONFIG)
-//        self.bookList = realm.objects(Book.self)
-        BookCollectionViewController.bookList = RealmUtil.fetchBookList()
-        if BookCollectionViewController.bookList?.count == 0 {
-            bookList = LocalFileLoader.loadBookList()
+        
+        BCVC.bookList = Realm2Raw.bookList(bookList: RealmUtil.fetchBookList())
+        if BCVC.bookList.count == 0 {
+            BCVC.bookList = LocalFileLoader.loadBookList()
         }
         
         
@@ -60,18 +60,28 @@ class BookCollectionViewController: UICollectionViewController {
             
             if let sender = sender as? BookCollectionViewCell {
                 paintingController.book = sender.book
+                paintingController.rawBook = sender.rawBook
                 paintingController.title = sender.bookName.text
             }
         }
     }
+
+    class func saveBooks() {
+        var realmBookList = [Book]()
+        for book in bookList {
+            realmBookList.append(Raw2Realm.book(rawBook: book))
+        }
+        RealmUtil.saveBookList(bookList: realmBookList)
+    }
 }
 
+// MARK: - extensions
 extension BookCollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (BookCollectionViewController.bookList?.count ?? 0) + 1
+        return BCVC.bookList.count  + 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,21 +98,15 @@ extension BookCollectionViewController {
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BookCollectionViewCell
             
-            let name  = BookCollectionViewController.bookList![ind-1].name
-            let cover = UIImage(data: BookCollectionViewController.bookList![ind-1].cover!)
-            cell.book = BookCollectionViewController.bookList![ind-1]
+            let name  = BCVC.bookList[ind-1].name
+            let cover = BCVC.bookList[ind-1].cover!
+            cell.book = BCVC.bookList[ind-1].book
+            cell.rawBook = BCVC.bookList[ind-1]
             cell.bookName.text = name
             cell.coverView.image = cover // ImageProcess.addBlurFilter(image: cover!)
             return cell
         }
     }
-    
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let paintingCollectionViewController = PaintingCollectionViewController(collectionViewLayout: UICollectionViewLayout())
-//        paintingCollectionViewController.book = bookList![indexPath.row]
-//        paintingCollectionViewController.title = bookList![indexPath.row].name
-//        navigationController?.pushViewController(paintingCollectionViewController, animated: true)
-//    }
 }
 
 extension BookCollectionViewController : UICollectionViewDelegateFlowLayout {

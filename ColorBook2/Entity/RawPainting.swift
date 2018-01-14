@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class RawPainting {
-    var owner: Book?
+    var pp: Painting!
+    var ownerId: String!
     var desc: String?
     var raw: UIImage? // the original pic
     var painting: UIImage?

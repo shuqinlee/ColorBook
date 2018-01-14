@@ -27,8 +27,10 @@ class ChooseImageViewController: UIViewController,
                                 UINavigationControllerDelegate {
 
     var delegate: ChooseImageViewControllerDelegate?
-    var book: Book!
-    var painting: Painting?
+//    var book: Book!
+    var rawBook: RawBook!
+//    var painting: Painting?
+    var rawPainting: RawPainting?
     var chosenImage: UIImage!
     let picker = UIImagePickerController()
     var pictureInput: PictureInput? {
@@ -119,12 +121,6 @@ class ChooseImageViewController: UIViewController,
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "confirmToEditSegue" {
-            let paintingPanel = segue.destination as! PaintingPanelViewController
-            paintingPanel.painting = painting
-        }
-    }
     
     // MARK: - Actions
     
@@ -134,23 +130,19 @@ class ChooseImageViewController: UIViewController,
     
     @IBAction func onSaveButtonTapped(_ sender: UIBarButtonItem) {
         // save
-        if let painting = painting {
-            painting.owner = book
-            print(((painting.raw!) as NSData).length)
-//            RealmUtil.saveSinglePainting(painting: painting)
-            RealmUtil.realmStmt {
-                book.paintingList.append(painting)
-            }
+        if let rawPainting = rawPainting {
             
+//            print(((painting.raw!) as NSData).length)
+////            RealmUtil.saveSinglePainting(painting: painting)
+//            RealmUtil.realmStmt {
+//                book.paintingList.append(painting)
+//            }
+            rawBook.paintingList.append(rawPainting)
             delegate?.saveButtonDidTapped(viewController: self)
         }
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onConfirmButtonTapped(_ sender: UIBarButtonItem) {
-        
-        
-    }
     
     @IBAction func photoLibraryTapped(_ sender: UIButton) {
         picker.allowsEditing = false // want a whole picture, not an edited version
@@ -195,10 +187,10 @@ extension ChooseImageViewController {
         filteredImage = filteredImage.filterWithOperation(inverter)
         mereImageView.contentMode = .scaleAspectFill
         mereImageView.image = filteredImage
-        painting = Painting()
-        painting!.raw =  UIImagePNGRepresentation(chosenImage)
-        painting!.line = UIImagePNGRepresentation(filteredImage)
-        painting!.id = NSUUID().uuidString
+        rawPainting = RawPainting()
+        rawPainting!.raw =  chosenImage
+        rawPainting!.line = filteredImage
+        rawPainting!.id = NSUUID().uuidString
         
         dismiss(animated: true, completion: nil)
     }

@@ -183,7 +183,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="coverView" destination="yZu-aL-uPN" id="Bhn-Ao-nzt"/>
-                                    <segue destination="Wm7-Po-B2J" kind="show" identifier="showPaintingPanelSegue" id="Kd3-fy-V1U"/>
+                                    <segue destination="Wm7-Po-B2J" kind="presentation" identifier="showPaintingPanelSegue" id="Kd3-fy-V1U"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -289,8 +289,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-WE-ONk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-WE-ONk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

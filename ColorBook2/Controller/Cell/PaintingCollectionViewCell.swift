@@ -11,4 +11,6 @@ import UIKit
 class PaintingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var coverView: UIImageView!
     var painting: Painting!
+    var rawPainting: RawPainting!
+    var ind: Int!
 }

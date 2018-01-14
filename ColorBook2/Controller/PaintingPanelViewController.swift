@@ -9,10 +9,15 @@
 import UIKit
 
 class PaintingPanelViewController: UIViewController {
+
     // MARK: - outlet property
     @IBOutlet weak var mainImageView: UIImageView!
+    
     // MARK: - none outlet property
-    var painting: Painting!
+    var painting: Painting! // rm
+    var paintingInd: Int!
+    var rawBook: RawBook!
+    var rawPainting: RawPainting!
     
     // MARK: - actions
     @IBAction func onPinched(_ sender: UIPinchGestureRecognizer) {
@@ -21,17 +26,24 @@ class PaintingPanelViewController: UIViewController {
         if let view = sender.view {
             view.transform = view.transform.scaledBy(x: scale, y: scale)
             sender.scale = 1
+            
+            
         }
-        if sender.state == .ended {
+        if sender.state == .ended  {
             print("pinched eneded")
-            self.navigationController?.popViewController(animated: false)
+            print(sender.velocity)
+            // show
+//            self.navigationController?.popViewController(animated: false)
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
         }
     }
     
     // MARK: - view brain
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainImageView.image = UIImage(data: painting.line!)
+        rawPainting = rawBook.paintingList[paintingInd]
+        mainImageView.image = rawPainting.line
         
         //painting.line
 
