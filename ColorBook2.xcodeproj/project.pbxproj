@@ -29,6 +29,17 @@
 		D660D138200BB0170078839B /* tortoise.gif in Resources */ = {isa = PBXBuildFile; fileRef = D660D12D200BAFFA0078839B /* tortoise.gif */; };
 		D660D139200BB0170078839B /* winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12E200BAFFA0078839B /* winter.jpg */; };
 		D660D13A200BB0170078839B /* witch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12F200BAFFA0078839B /* witch.jpg */; };
+		D660D13D200BF2D00078839B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D13B200BF2D00078839B /* UserViewController.swift */; };
+		D660D13E200BF2D00078839B /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D660D13C200BF2D00078839B /* UserViewController.xib */; };
+		D660D147200BF5520078839B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D13F200BF5510078839B /* UIView.swift */; };
+		D660D148200BF5520078839B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D140200BF5510078839B /* UIImage.swift */; };
+		D660D149200BF5520078839B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D141200BF5510078839B /* UIViewController.swift */; };
+		D660D14A200BF5520078839B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D142200BF5510078839B /* UITableViewExtension.swift */; };
+		D660D14B200BF5520078839B /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D143200BF5510078839B /* UIApplication.swift */; };
+		D660D14C200BF5520078839B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D144200BF5510078839B /* UIImageView.swift */; };
+		D660D14D200BF5520078839B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D145200BF5510078839B /* UIColor.swift */; };
+		D660D14E200BF5520078839B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D146200BF5520078839B /* String.swift */; };
+		D660D150200C1CA40078839B /* SideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D14F200C1CA40078839B /* SideTableViewCell.swift */; };
 		D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */; };
 		D6A32F931FDE80EF004BDE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F911FDE80EF004BDE36 /* Main.storyboard */; };
 		D6A32F951FDE80EF004BDE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F941FDE80EF004BDE36 /* Assets.xcassets */; };
@@ -96,6 +107,17 @@
 		D660D12D200BAFFA0078839B /* tortoise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tortoise.gif; sourceTree = "<group>"; };
 		D660D12E200BAFFA0078839B /* winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winter.jpg; sourceTree = "<group>"; };
 		D660D12F200BAFFA0078839B /* witch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = witch.jpg; sourceTree = "<group>"; };
+		D660D13B200BF2D00078839B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		D660D13C200BF2D00078839B /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		D660D13F200BF5510078839B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIView.swift; sourceTree = "<group>"; };
+		D660D140200BF5510078839B /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIImage.swift; sourceTree = "<group>"; };
+		D660D141200BF5510078839B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIViewController.swift; sourceTree = "<group>"; };
+		D660D142200BF5510078839B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UITableViewExtension.swift; sourceTree = "<group>"; };
+		D660D143200BF5510078839B /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIApplication.swift; sourceTree = "<group>"; };
+		D660D144200BF5510078839B /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIImageView.swift; sourceTree = "<group>"; };
+		D660D145200BF5510078839B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIColor.swift; sourceTree = "<group>"; };
+		D660D146200BF5520078839B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/String.swift; sourceTree = "<group>"; };
+		D660D14F200C1CA40078839B /* SideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTableViewCell.swift; sourceTree = "<group>"; };
 		D6A32F8A1FDE80EF004BDE36 /* ColorBook2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBook2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A32F921FDE80EF004BDE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +199,14 @@
 		D62EBF182000C78D00B6FA88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				D660D146200BF5520078839B /* String.swift */,
+				D660D143200BF5510078839B /* UIApplication.swift */,
+				D660D145200BF5510078839B /* UIColor.swift */,
+				D660D140200BF5510078839B /* UIImage.swift */,
+				D660D144200BF5510078839B /* UIImageView.swift */,
+				D660D142200BF5510078839B /* UITableViewExtension.swift */,
+				D660D13F200BF5510078839B /* UIView.swift */,
+				D660D141200BF5510078839B /* UIViewController.swift */,
 				D6A32FBC1FDE822B004BDE36 /* Base64Util.swift */,
 				D6A32FBE1FDE822D004BDE36 /* SwiftyJSON.swift */,
 				D6D0E1992004F6D200BF279A /* CannyFilter.swift */,
@@ -208,6 +238,7 @@
 				D6A32FCC1FDEF606004BDE36 /* BookCollectionViewCell.swift */,
 				D6B793BE2003AE95007B3C49 /* PaintingCollectionViewCell.swift */,
 				D660D122200BAA350078839B /* BookImageCollectionViewCell.swift */,
+				D660D14F200C1CA40078839B /* SideTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -301,6 +332,8 @@
 				D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */,
 				D6A34EA9200725D0004647AB /* PaintingPanelViewController.swift */,
 				D660D120200BA9F00078839B /* NewBookViewController.swift */,
+				D660D13B200BF2D00078839B /* UserViewController.swift */,
+				D660D13C200BF2D00078839B /* UserViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +454,7 @@
 				D660D133200BB0170078839B /* monkey.jpg in Resources */,
 				D660D134200BB0170078839B /* mountain.png in Resources */,
 				D660D135200BB0170078839B /* mouse.jpg in Resources */,
+				D660D13E200BF2D00078839B /* UserViewController.xib in Resources */,
 				D660D136200BB0170078839B /* owl.jpg in Resources */,
 				D660D137200BB0170078839B /* rabbit.jpg in Resources */,
 				D660D138200BB0170078839B /* tortoise.gif in Resources */,
@@ -519,28 +553,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D660D147200BF5520078839B /* UIView.swift in Sources */,
 				D6F74B742003DA030020065C /* NewBookViewCell.swift in Sources */,
 				D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */,
 				D62EBF1B2000E43600B6FA88 /* PaintingCollectionViewController.swift in Sources */,
 				D660D123200BAA350078839B /* BookImageCollectionViewCell.swift in Sources */,
+				D660D14D200BF5520078839B /* UIColor.swift in Sources */,
 				D660D10B200B40890078839B /* EntityTrans.swift in Sources */,
+				D660D148200BF5520078839B /* UIImage.swift in Sources */,
 				D6A32FC71FDE8230004BDE36 /* Book.swift in Sources */,
 				D660D109200B3D040078839B /* RawPainting.swift in Sources */,
 				D6A32FCD1FDEF606004BDE36 /* BookCollectionViewCell.swift in Sources */,
 				D660D107200B3CF80078839B /* RawBook.swift in Sources */,
+				D660D14E200BF5520078839B /* String.swift in Sources */,
 				D6D0E19A2004F6D200BF279A /* CannyFilter.swift in Sources */,
 				D607F1C32004B9910005AE5E /* ChooseImageViewController.swift in Sources */,
 				D6C85EBA2005DD82005ABEBE /* TransparentImage.swift in Sources */,
+				D660D14C200BF5520078839B /* UIImageView.swift in Sources */,
+				D660D149200BF5520078839B /* UIViewController.swift in Sources */,
 				D62EBF5920010B2E00B6FA88 /* config.swift in Sources */,
 				D6F74B722003D9CC0020065C /* NewPaintingViewCell.swift in Sources */,
+				D660D150200C1CA40078839B /* SideTableViewCell.swift in Sources */,
 				D6A32FC41FDE8230004BDE36 /* Painting.swift in Sources */,
+				D660D14B200BF5520078839B /* UIApplication.swift in Sources */,
 				D6A32FC51FDE8230004BDE36 /* SwiftyJSON.swift in Sources */,
 				D6A32FC31FDE8230004BDE36 /* Base64Util.swift in Sources */,
 				D6A34EAA200725D1004647AB /* PaintingPanelViewController.swift in Sources */,
 				D6A32FC21FDE8230004BDE36 /* JSONContent.swift in Sources */,
 				D6C85EBC20061EC9005ABEBE /* RealmUtil.swift in Sources */,
 				D6A32FC81FDE8230004BDE36 /* BookCollectionViewController.swift in Sources */,
+				D660D13D200BF2D00078839B /* UserViewController.swift in Sources */,
 				D6B793BF2003AE95007B3C49 /* PaintingCollectionViewCell.swift in Sources */,
+				D660D14A200BF5520078839B /* UITableViewExtension.swift in Sources */,
 				D660D121200BA9F00078839B /* NewBookViewController.swift in Sources */,
 				D6A32FCB1FDEEBD6004BDE36 /* DataLoader.swift in Sources */,
 			);

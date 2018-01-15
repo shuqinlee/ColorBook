@@ -13,14 +13,25 @@ import SlideMenuControllerSwift
 typealias BCVC = BookCollectionViewController
 //class BookCollectionViewController: UICollectionViewController {
 class BookCollectionViewController: UIViewController {
-
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    @IBOutlet weak var sideView: UIView!
+    @IBOutlet weak var viewContriant: NSLayoutConstraint!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var sideTableView: UITableView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - non outlet property
+    static var bookList = [RawBook]()// = LocalFileLoader.loadBookList()
     fileprivate let reuseIdentifier = "BookCell"
     fileprivate let newBookIdentifier = "NewBookCell"
-    static var bookList = [RawBook]()// = LocalFileLoader.loadBookList()
+    
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow: CGFloat = 2
+
+    
     
     // MARK: - methods
     override func viewDidLoad() {
@@ -31,6 +42,12 @@ class BookCollectionViewController: UIViewController {
         if BCVC.bookList.count == 0 {
             BCVC.bookList = LocalFileLoader.loadBookList()
         }
+        blurView.layer.cornerRadius = 15
+        sideView.layer.shadowColor = UIColor.black.cgColor
+        sideView.layer.shadowOpacity = 0.5
+        sideView.layer.shadowOffset = CGSize(width: 5, height: 0)
+        
+        self.viewContriant.constant = -190
         
     }
     
@@ -55,6 +72,41 @@ class BookCollectionViewController: UIViewController {
             realmBookList.append(Raw2Realm.book(rawBook: book))
         }
         RealmUtil.saveBookList(bookList: realmBookList)
+    }
+    @IBAction func panGesturePerformed(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed {
+            let translation = sender.translation(in: self.view).x
+            if translation > 0 { // swipe right
+                
+                if viewContriant.constant < 20 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewContriant.constant += translation
+                        self.view.layoutIfNeeded()
+                        })
+                }
+            } else { // swipe left
+                if viewContriant.constant > -190 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewContriant.constant += translation
+                        self.view.layoutIfNeeded()
+                    })
+                }
+            }
+        } else if sender.state == .ended {
+            
+            if self.viewContriant.constant < -100 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viewContriant.constant = -190
+                    self.view.layoutIfNeeded()
+                })
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viewContriant.constant = 0
+                    self.view.layoutIfNeeded()
+                })
+            }
+            
+        }
     }
 }
 
@@ -119,3 +171,17 @@ extension BookCollectionViewController: NewBookViewControllerDelegate {
         self.collectionView.reloadData()
     }
 }
+
+//extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//    
+//    
+//    
+//}
+
