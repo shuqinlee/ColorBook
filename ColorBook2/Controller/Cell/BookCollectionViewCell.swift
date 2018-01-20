@@ -14,5 +14,6 @@ class BookCollectionViewCell: UICollectionViewCell {
     var rawBook: RawBook!
     @IBOutlet weak var coverView: UIImageView!
     @IBOutlet weak var bookName: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
 }

@@ -11,8 +11,38 @@
 		D607F1BF2004A8130005AE5E /* gray camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D607F1BE2004A8130005AE5E /* gray camera.png */; };
 		D607F1C12004A99F0005AE5E /* picture icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D607F1C02004A99F0005AE5E /* picture icon.png */; };
 		D607F1C32004B9910005AE5E /* ChooseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */; };
+		D61995F7200DF41B0098EB25 /* eraser-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = D61995F6200DF41A0098EB25 /* eraser-unselected.png */; };
+		D6199605200E42930098EB25 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995F9200E42930098EB25 /* CGFloat+Extensions.swift */; };
+		D6199606200E42930098EB25 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FA200E42930098EB25 /* CGPoint+Extensions.swift */; };
+		D6199607200E42930098EB25 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FB200E42930098EB25 /* CGVector+Extensions.swift */; };
+		D6199608200E42930098EB25 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FC200E42930098EB25 /* Int+Extensions.swift */; };
+		D6199609200E42930098EB25 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FD200E42930098EB25 /* SKAction+Extensions.swift */; };
+		D619960A200E42930098EB25 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FE200E42930098EB25 /* SKAction+SpecialEffects.swift */; };
+		D619960B200E42930098EB25 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61995FF200E42930098EB25 /* SKColor+Extensions.swift */; };
+		D619960C200E42930098EB25 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199600200E42930098EB25 /* SKNode+Extensions.swift */; };
+		D619960D200E42930098EB25 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199601200E42930098EB25 /* SKTAudio.swift */; };
+		D619960E200E42930098EB25 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199602200E42930098EB25 /* SKTEffects.swift */; };
+		D619960F200E42930098EB25 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199603200E42930098EB25 /* SKTTimingFunctions.swift */; };
+		D6199610200E42930098EB25 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199604200E42930098EB25 /* Vector3.swift */; };
+		D619961A200E63720098EB25 /* eraser-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6199613200E63710098EB25 /* eraser-selected.png */; };
+		D619961C200E63720098EB25 /* pencil-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6199615200E63710098EB25 /* pencil-unselected.png */; };
+		D619961E200E63720098EB25 /* circle-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6199617200E63720098EB25 /* circle-selected.png */; };
+		D6199623200FF23C0098EB25 /* PaintingPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199622200FF23C0098EB25 /* PaintingPanelView.swift */; };
+		D6199627201004560098EB25 /* mixed.png in Resources */ = {isa = PBXBuildFile; fileRef = D6199625201004540098EB25 /* mixed.png */; };
+		D6199628201004560098EB25 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D6199626201004550098EB25 /* overlay.png */; };
+		D619962A20123A9C0098EB25 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D619962920123A9C0098EB25 /* Globals.swift */; };
+		D619962C201249190098EB25 /* share-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = D619962B201249180098EB25 /* share-gray.png */; };
+		D619962E201264EA0098EB25 /* DeleteActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D619962D201264EA0098EB25 /* DeleteActivity.swift */; };
+		D6199630201266CC0098EB25 /* Bin.png in Resources */ = {isa = PBXBuildFile; fileRef = D619962F201266CB0098EB25 /* Bin.png */; };
+		D6199632201293A30098EB25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199631201293A30098EB25 /* LoginViewController.swift */; };
+		D6199634201293C20098EB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6199633201293C20098EB25 /* RegisterViewController.swift */; };
+		D619963620129AA00098EB25 /* word-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D619963520129A9F0098EB25 /* word-icon.png */; };
+		D61996382013152F0098EB25 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61996372013152F0098EB25 /* Response.swift */; };
 		D62EBF1B2000E43600B6FA88 /* PaintingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62EBF1A2000E43600B6FA88 /* PaintingCollectionViewController.swift */; };
 		D62EBF5920010B2E00B6FA88 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62EBF5820010B2E00B6FA88 /* config.swift */; };
+		D65A55F8200DE97A00973FB2 /* final-eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = D65A55F6200DE97900973FB2 /* final-eraser.png */; };
+		D65A55F9200DE97A00973FB2 /* pencil-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D65A55F7200DE97A00973FB2 /* pencil-selected.png */; };
+		D65A55FB200DEB6A00973FB2 /* circle-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = D65A55FA200DEB6A00973FB2 /* circle-unselected.png */; };
 		D660D107200B3CF80078839B /* RawBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D106200B3CF80078839B /* RawBook.swift */; };
 		D660D109200B3D040078839B /* RawPainting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D108200B3D040078839B /* RawPainting.swift */; };
 		D660D10B200B40890078839B /* EntityTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D10A200B40890078839B /* EntityTrans.swift */; };
@@ -29,17 +59,17 @@
 		D660D138200BB0170078839B /* tortoise.gif in Resources */ = {isa = PBXBuildFile; fileRef = D660D12D200BAFFA0078839B /* tortoise.gif */; };
 		D660D139200BB0170078839B /* winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12E200BAFFA0078839B /* winter.jpg */; };
 		D660D13A200BB0170078839B /* witch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D660D12F200BAFFA0078839B /* witch.jpg */; };
-		D660D13D200BF2D00078839B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D13B200BF2D00078839B /* UserViewController.swift */; };
-		D660D13E200BF2D00078839B /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D660D13C200BF2D00078839B /* UserViewController.xib */; };
 		D660D147200BF5520078839B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D13F200BF5510078839B /* UIView.swift */; };
 		D660D148200BF5520078839B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D140200BF5510078839B /* UIImage.swift */; };
-		D660D149200BF5520078839B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D141200BF5510078839B /* UIViewController.swift */; };
 		D660D14A200BF5520078839B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D142200BF5510078839B /* UITableViewExtension.swift */; };
-		D660D14B200BF5520078839B /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D143200BF5510078839B /* UIApplication.swift */; };
 		D660D14C200BF5520078839B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D144200BF5510078839B /* UIImageView.swift */; };
 		D660D14D200BF5520078839B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D145200BF5510078839B /* UIColor.swift */; };
 		D660D14E200BF5520078839B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D146200BF5520078839B /* String.swift */; };
 		D660D150200C1CA40078839B /* SideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D14F200C1CA40078839B /* SideTableViewCell.swift */; };
+		D660D15B200D73500078839B /* PainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D158200D734F0078839B /* PainterView.swift */; };
+		D660D15C200D73500078839B /* PainterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660D159200D73500078839B /* PainterContent.swift */; };
+		D660D164200D90590078839B /* pencil2.png in Resources */ = {isa = PBXBuildFile; fileRef = D660D163200D90590078839B /* pencil2.png */; };
+		D660D166200DD0890078839B /* penci.png in Resources */ = {isa = PBXBuildFile; fileRef = D660D165200DD0880078839B /* penci.png */; };
 		D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */; };
 		D6A32F931FDE80EF004BDE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F911FDE80EF004BDE36 /* Main.storyboard */; };
 		D6A32F951FDE80EF004BDE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A32F941FDE80EF004BDE36 /* Assets.xcassets */; };
@@ -89,8 +119,38 @@
 		D607F1BE2004A8130005AE5E /* gray camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray camera.png"; path = "../../../Design/gray camera.png"; sourceTree = "<group>"; };
 		D607F1C02004A99F0005AE5E /* picture icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "picture icon.png"; path = "../../../Design/picture icon.png"; sourceTree = "<group>"; };
 		D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImageViewController.swift; sourceTree = "<group>"; };
+		D61995F6200DF41A0098EB25 /* eraser-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-unselected.png"; sourceTree = "<group>"; };
+		D61995F9200E42930098EB25 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		D61995FA200E42930098EB25 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		D61995FB200E42930098EB25 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
+		D61995FC200E42930098EB25 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		D61995FD200E42930098EB25 /* SKAction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
+		D61995FE200E42930098EB25 /* SKAction+SpecialEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SpecialEffects.swift"; sourceTree = "<group>"; };
+		D61995FF200E42930098EB25 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
+		D6199600200E42930098EB25 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
+		D6199601200E42930098EB25 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		D6199602200E42930098EB25 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
+		D6199603200E42930098EB25 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
+		D6199604200E42930098EB25 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		D6199613200E63710098EB25 /* eraser-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-selected.png"; sourceTree = "<group>"; };
+		D6199615200E63710098EB25 /* pencil-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-unselected.png"; sourceTree = "<group>"; };
+		D6199617200E63720098EB25 /* circle-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-selected.png"; sourceTree = "<group>"; };
+		D6199622200FF23C0098EB25 /* PaintingPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingPanelView.swift; sourceTree = "<group>"; };
+		D6199625201004540098EB25 /* mixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mixed.png; sourceTree = "<group>"; };
+		D6199626201004550098EB25 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
+		D619962920123A9C0098EB25 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		D619962B201249180098EB25 /* share-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-gray.png"; sourceTree = "<group>"; };
+		D619962D201264EA0098EB25 /* DeleteActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActivity.swift; sourceTree = "<group>"; };
+		D619962F201266CB0098EB25 /* Bin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bin.png; sourceTree = "<group>"; };
+		D6199631201293A30098EB25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6199633201293C20098EB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D619963520129A9F0098EB25 /* word-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "word-icon.png"; sourceTree = "<group>"; };
+		D61996372013152F0098EB25 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D62EBF1A2000E43600B6FA88 /* PaintingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingCollectionViewController.swift; sourceTree = "<group>"; };
 		D62EBF5820010B2E00B6FA88 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		D65A55F6200DE97900973FB2 /* final-eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "final-eraser.png"; path = "../../../Design/image_res/final-eraser.png"; sourceTree = "<group>"; };
+		D65A55F7200DE97A00973FB2 /* pencil-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-selected.png"; sourceTree = "<group>"; };
+		D65A55FA200DEB6A00973FB2 /* circle-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-unselected.png"; sourceTree = "<group>"; };
 		D660D106200B3CF80078839B /* RawBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawBook.swift; sourceTree = "<group>"; };
 		D660D108200B3D040078839B /* RawPainting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawPainting.swift; sourceTree = "<group>"; };
 		D660D10A200B40890078839B /* EntityTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTrans.swift; sourceTree = "<group>"; };
@@ -107,17 +167,18 @@
 		D660D12D200BAFFA0078839B /* tortoise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tortoise.gif; sourceTree = "<group>"; };
 		D660D12E200BAFFA0078839B /* winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winter.jpg; sourceTree = "<group>"; };
 		D660D12F200BAFFA0078839B /* witch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = witch.jpg; sourceTree = "<group>"; };
-		D660D13B200BF2D00078839B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		D660D13C200BF2D00078839B /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		D660D13F200BF5510078839B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIView.swift; sourceTree = "<group>"; };
 		D660D140200BF5510078839B /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIImage.swift; sourceTree = "<group>"; };
-		D660D141200BF5510078839B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIViewController.swift; sourceTree = "<group>"; };
 		D660D142200BF5510078839B /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UITableViewExtension.swift; sourceTree = "<group>"; };
-		D660D143200BF5510078839B /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIApplication.swift; sourceTree = "<group>"; };
 		D660D144200BF5510078839B /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIImageView.swift; sourceTree = "<group>"; };
 		D660D145200BF5510078839B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/UIColor.swift; sourceTree = "<group>"; };
 		D660D146200BF5520078839B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../SlideMenuControllerSwift/SlideMenuControllerSwift/String.swift; sourceTree = "<group>"; };
 		D660D14F200C1CA40078839B /* SideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTableViewCell.swift; sourceTree = "<group>"; };
+		D660D158200D734F0078839B /* PainterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainterView.swift; sourceTree = "<group>"; };
+		D660D159200D73500078839B /* PainterContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainterContent.swift; sourceTree = "<group>"; };
+		D660D15D200D8B070078839B /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		D660D163200D90590078839B /* pencil2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil2.png; sourceTree = "<group>"; };
+		D660D165200DD0880078839B /* penci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penci.png; sourceTree = "<group>"; };
 		D6A32F8A1FDE80EF004BDE36 /* ColorBook2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBook2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A32F921FDE80EF004BDE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,17 +257,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D61995F8200E42930098EB25 /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D61995F9200E42930098EB25 /* CGFloat+Extensions.swift */,
+				D61995FA200E42930098EB25 /* CGPoint+Extensions.swift */,
+				D61995FB200E42930098EB25 /* CGVector+Extensions.swift */,
+				D61995FC200E42930098EB25 /* Int+Extensions.swift */,
+				D61995FD200E42930098EB25 /* SKAction+Extensions.swift */,
+				D61995FE200E42930098EB25 /* SKAction+SpecialEffects.swift */,
+				D61995FF200E42930098EB25 /* SKColor+Extensions.swift */,
+				D6199600200E42930098EB25 /* SKNode+Extensions.swift */,
+				D6199601200E42930098EB25 /* SKTAudio.swift */,
+				D6199602200E42930098EB25 /* SKTEffects.swift */,
+				D6199603200E42930098EB25 /* SKTTimingFunctions.swift */,
+				D6199604200E42930098EB25 /* Vector3.swift */,
+			);
+			name = SKTUtils;
+			path = "../../../../../../../../Downloads/Starter Project 2/MonkeyPinch/MonkeyPinch/SKTUtils";
+			sourceTree = "<group>";
+		};
+		D6199624200FF2520098EB25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D660D158200D734F0078839B /* PainterView.swift */,
+				D6199622200FF23C0098EB25 /* PaintingPanelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D62EBF182000C78D00B6FA88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				D660D146200BF5520078839B /* String.swift */,
-				D660D143200BF5510078839B /* UIApplication.swift */,
 				D660D145200BF5510078839B /* UIColor.swift */,
 				D660D140200BF5510078839B /* UIImage.swift */,
 				D660D144200BF5510078839B /* UIImageView.swift */,
 				D660D142200BF5510078839B /* UITableViewExtension.swift */,
 				D660D13F200BF5510078839B /* UIView.swift */,
-				D660D141200BF5510078839B /* UIViewController.swift */,
 				D6A32FBC1FDE822B004BDE36 /* Base64Util.swift */,
 				D6A32FBE1FDE822D004BDE36 /* SwiftyJSON.swift */,
 				D6D0E1992004F6D200BF279A /* CannyFilter.swift */,
@@ -246,6 +334,20 @@
 		D660D124200BAFFA0078839B /* image_res */ = {
 			isa = PBXGroup;
 			children = (
+				D619963520129A9F0098EB25 /* word-icon.png */,
+				D619962F201266CB0098EB25 /* Bin.png */,
+				D619962B201249180098EB25 /* share-gray.png */,
+				D6199625201004540098EB25 /* mixed.png */,
+				D6199626201004550098EB25 /* overlay.png */,
+				D65A55FA200DEB6A00973FB2 /* circle-unselected.png */,
+				D6199617200E63720098EB25 /* circle-selected.png */,
+				D6199615200E63710098EB25 /* pencil-unselected.png */,
+				D65A55F7200DE97A00973FB2 /* pencil-selected.png */,
+				D61995F6200DF41A0098EB25 /* eraser-unselected.png */,
+				D6199613200E63710098EB25 /* eraser-selected.png */,
+				D660D165200DD0880078839B /* penci.png */,
+				D660D163200D90590078839B /* pencil2.png */,
+				D660D15D200D8B070078839B /* pencil.png */,
 				D660D125200BAFFA0078839B /* elephant.jpg */,
 				D660D126200BAFFA0078839B /* fox.jpg */,
 				D660D127200BAFFA0078839B /* hedgehogs.jpg */,
@@ -265,6 +367,7 @@
 		D6A32F811FDE80EF004BDE36 = {
 			isa = PBXGroup;
 			children = (
+				D65A55F6200DE97900973FB2 /* final-eraser.png */,
 				D660D124200BAFFA0078839B /* image_res */,
 				D607F1C02004A99F0005AE5E /* picture icon.png */,
 				D607F1BE2004A8130005AE5E /* gray camera.png */,
@@ -292,8 +395,11 @@
 		D6A32F8C1FDE80EF004BDE36 /* ColorBook2 */ = {
 			isa = PBXGroup;
 			children = (
+				D61995F8200E42930098EB25 /* SKTUtils */,
 				D6A32F911FDE80EF004BDE36 /* Main.storyboard */,
 				D6A32F8D1FDE80EF004BDE36 /* AppDelegate.swift */,
+				D660D159200D73500078839B /* PainterContent.swift */,
+				D6199624200FF2520098EB25 /* View */,
 				D6A32FC91FDE8278004BDE36 /* Controller */,
 				D62EBF182000C78D00B6FA88 /* Util */,
 				D62EBF192000C7AA00B6FA88 /* Entity */,
@@ -301,6 +407,9 @@
 				D6A32F961FDE80EF004BDE36 /* LaunchScreen.storyboard */,
 				D6A32F991FDE80EF004BDE36 /* Info.plist */,
 				D62EBF5820010B2E00B6FA88 /* config.swift */,
+				D619962920123A9C0098EB25 /* Globals.swift */,
+				D619962D201264EA0098EB25 /* DeleteActivity.swift */,
+				D61996372013152F0098EB25 /* Response.swift */,
 			);
 			path = ColorBook2;
 			sourceTree = "<group>";
@@ -332,8 +441,8 @@
 				D607F1C22004B9910005AE5E /* ChooseImageViewController.swift */,
 				D6A34EA9200725D0004647AB /* PaintingPanelViewController.swift */,
 				D660D120200BA9F00078839B /* NewBookViewController.swift */,
-				D660D13B200BF2D00078839B /* UserViewController.swift */,
-				D660D13C200BF2D00078839B /* UserViewController.xib */,
+				D6199631201293A30098EB25 /* LoginViewController.swift */,
+				D6199633201293C20098EB25 /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,25 +557,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D619961A200E63720098EB25 /* eraser-selected.png in Resources */,
+				D65A55FB200DEB6A00973FB2 /* circle-unselected.png in Resources */,
+				D65A55F8200DE97A00973FB2 /* final-eraser.png in Resources */,
+				D65A55F9200DE97A00973FB2 /* pencil-selected.png in Resources */,
 				D660D130200BB0170078839B /* elephant.jpg in Resources */,
+				D660D164200D90590078839B /* pencil2.png in Resources */,
+				D619961C200E63720098EB25 /* pencil-unselected.png in Resources */,
 				D660D131200BB0170078839B /* fox.jpg in Resources */,
 				D660D132200BB0170078839B /* hedgehogs.jpg in Resources */,
+				D619961E200E63720098EB25 /* circle-selected.png in Resources */,
 				D660D133200BB0170078839B /* monkey.jpg in Resources */,
 				D660D134200BB0170078839B /* mountain.png in Resources */,
 				D660D135200BB0170078839B /* mouse.jpg in Resources */,
-				D660D13E200BF2D00078839B /* UserViewController.xib in Resources */,
 				D660D136200BB0170078839B /* owl.jpg in Resources */,
+				D619962C201249190098EB25 /* share-gray.png in Resources */,
 				D660D137200BB0170078839B /* rabbit.jpg in Resources */,
 				D660D138200BB0170078839B /* tortoise.gif in Resources */,
 				D660D139200BB0170078839B /* winter.jpg in Resources */,
+				D619963620129AA00098EB25 /* word-icon.png in Resources */,
 				D660D13A200BB0170078839B /* witch.jpg in Resources */,
+				D61995F7200DF41B0098EB25 /* eraser-unselected.png in Resources */,
+				D6199630201266CC0098EB25 /* Bin.png in Resources */,
 				D607F1C12004A99F0005AE5E /* picture icon.png in Resources */,
 				D607F1BF2004A8130005AE5E /* gray camera.png in Resources */,
 				D6D766762003BBD1006B718E /* newImgView.png in Resources */,
 				D6CE0D91200200D50029BFD9 /* allBook.json in Resources */,
 				D6A32F981FDE80EF004BDE36 /* LaunchScreen.storyboard in Resources */,
+				D6199628201004560098EB25 /* overlay.png in Resources */,
 				D6A32F951FDE80EF004BDE36 /* Assets.xcassets in Resources */,
 				D6A32F931FDE80EF004BDE36 /* Main.storyboard in Resources */,
+				D660D166200DD0890078839B /* penci.png in Resources */,
+				D6199627201004560098EB25 /* mixed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,19 +634,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ColorBook2/Pods-ColorBook2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/EFColorPicker/EFColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOverlays/SwiftOverlays.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVGPUImage2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOverlays.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -555,38 +681,55 @@
 			files = (
 				D660D147200BF5520078839B /* UIView.swift in Sources */,
 				D6F74B742003DA030020065C /* NewBookViewCell.swift in Sources */,
+				D619960A200E42930098EB25 /* SKAction+SpecialEffects.swift in Sources */,
+				D6199623200FF23C0098EB25 /* PaintingPanelView.swift in Sources */,
+				D6199605200E42930098EB25 /* CGFloat+Extensions.swift in Sources */,
 				D6A32F8E1FDE80EF004BDE36 /* AppDelegate.swift in Sources */,
+				D6199606200E42930098EB25 /* CGPoint+Extensions.swift in Sources */,
 				D62EBF1B2000E43600B6FA88 /* PaintingCollectionViewController.swift in Sources */,
+				D619962A20123A9C0098EB25 /* Globals.swift in Sources */,
 				D660D123200BAA350078839B /* BookImageCollectionViewCell.swift in Sources */,
 				D660D14D200BF5520078839B /* UIColor.swift in Sources */,
 				D660D10B200B40890078839B /* EntityTrans.swift in Sources */,
 				D660D148200BF5520078839B /* UIImage.swift in Sources */,
 				D6A32FC71FDE8230004BDE36 /* Book.swift in Sources */,
+				D6199632201293A30098EB25 /* LoginViewController.swift in Sources */,
+				D619960F200E42930098EB25 /* SKTTimingFunctions.swift in Sources */,
+				D6199607200E42930098EB25 /* CGVector+Extensions.swift in Sources */,
 				D660D109200B3D040078839B /* RawPainting.swift in Sources */,
 				D6A32FCD1FDEF606004BDE36 /* BookCollectionViewCell.swift in Sources */,
 				D660D107200B3CF80078839B /* RawBook.swift in Sources */,
 				D660D14E200BF5520078839B /* String.swift in Sources */,
 				D6D0E19A2004F6D200BF279A /* CannyFilter.swift in Sources */,
+				D660D15B200D73500078839B /* PainterView.swift in Sources */,
 				D607F1C32004B9910005AE5E /* ChooseImageViewController.swift in Sources */,
 				D6C85EBA2005DD82005ABEBE /* TransparentImage.swift in Sources */,
+				D619960D200E42930098EB25 /* SKTAudio.swift in Sources */,
 				D660D14C200BF5520078839B /* UIImageView.swift in Sources */,
-				D660D149200BF5520078839B /* UIViewController.swift in Sources */,
 				D62EBF5920010B2E00B6FA88 /* config.swift in Sources */,
 				D6F74B722003D9CC0020065C /* NewPaintingViewCell.swift in Sources */,
+				D619960B200E42930098EB25 /* SKColor+Extensions.swift in Sources */,
 				D660D150200C1CA40078839B /* SideTableViewCell.swift in Sources */,
 				D6A32FC41FDE8230004BDE36 /* Painting.swift in Sources */,
-				D660D14B200BF5520078839B /* UIApplication.swift in Sources */,
 				D6A32FC51FDE8230004BDE36 /* SwiftyJSON.swift in Sources */,
 				D6A32FC31FDE8230004BDE36 /* Base64Util.swift in Sources */,
+				D6199608200E42930098EB25 /* Int+Extensions.swift in Sources */,
+				D660D15C200D73500078839B /* PainterContent.swift in Sources */,
 				D6A34EAA200725D1004647AB /* PaintingPanelViewController.swift in Sources */,
+				D61996382013152F0098EB25 /* Response.swift in Sources */,
 				D6A32FC21FDE8230004BDE36 /* JSONContent.swift in Sources */,
+				D619960E200E42930098EB25 /* SKTEffects.swift in Sources */,
 				D6C85EBC20061EC9005ABEBE /* RealmUtil.swift in Sources */,
 				D6A32FC81FDE8230004BDE36 /* BookCollectionViewController.swift in Sources */,
-				D660D13D200BF2D00078839B /* UserViewController.swift in Sources */,
+				D6199634201293C20098EB25 /* RegisterViewController.swift in Sources */,
 				D6B793BF2003AE95007B3C49 /* PaintingCollectionViewCell.swift in Sources */,
 				D660D14A200BF5520078839B /* UITableViewExtension.swift in Sources */,
 				D660D121200BA9F00078839B /* NewBookViewController.swift in Sources */,
+				D619960C200E42930098EB25 /* SKNode+Extensions.swift in Sources */,
+				D6199609200E42930098EB25 /* SKAction+Extensions.swift in Sources */,
+				D6199610200E42930098EB25 /* Vector3.swift in Sources */,
 				D6A32FCB1FDEEBD6004BDE36 /* DataLoader.swift in Sources */,
+				D619962E201264EA0098EB25 /* DeleteActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +815,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[arch=*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -729,6 +874,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

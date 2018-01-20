@@ -58,7 +58,7 @@ class Raw2Realm {
         // 3
         if let raw = rawPainting.raw { painting.raw = UIImagePNGRepresentation(raw) }
         // 4
-        if let line = rawPainting.line { painting.raw = UIImagePNGRepresentation(line) }
+        if let line = rawPainting.line { painting.line = UIImagePNGRepresentation(line) }
         // 5
         if let pp = rawPainting.painting { painting.painting = UIImagePNGRepresentation(pp) }
         // 6

@@ -14,8 +14,8 @@ protocol NewBookViewControllerDelegate {
 }
 
 class NewBookViewController: UIViewController {
-    // MARK: - outlet variables
     
+    // MARK: - outlet variables
     @IBOutlet weak var bookNameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -112,6 +112,7 @@ extension NewBookViewController: UICollectionViewDataSource, UICollectionViewDel
         rawBook.cover? = image
         collectionView.deselectItem(at: indexPath, animated: true)
     }
+    
 }
 
 extension NewBookViewController: UITextFieldDelegate {

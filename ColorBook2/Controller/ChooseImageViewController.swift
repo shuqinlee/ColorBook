@@ -132,11 +132,7 @@ class ChooseImageViewController: UIViewController,
         // save
         if let rawPainting = rawPainting {
             
-//            print(((painting.raw!) as NSData).length)
-////            RealmUtil.saveSinglePainting(painting: painting)
-//            RealmUtil.realmStmt {
-//                book.paintingList.append(painting)
-//            }
+
             rawBook.paintingList.append(rawPainting)
             delegate?.saveButtonDidTapped(viewController: self)
         }
@@ -161,6 +157,8 @@ class ChooseImageViewController: UIViewController,
         filteredImage = filteredImage.removeBlackBG()!
         filteredImage = filteredImage.filterWithOperation(inverter)
         mereImageView.image = filteredImage
+        
+        rawPainting?.line = filteredImage
     }
     
     @IBAction func shootPhotoTapped(_ sender: UIButton) {
@@ -192,11 +190,16 @@ extension ChooseImageViewController {
         rawPainting!.line = filteredImage
         rawPainting!.id = NSUUID().uuidString
         
+        if picker.sourceType == .camera {
+            UIImageWriteToSavedPhotosAlbum(chosenImage, self, nil, nil)
+        }
         dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }
 

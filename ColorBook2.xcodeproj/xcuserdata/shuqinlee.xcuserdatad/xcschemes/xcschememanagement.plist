@@ -7,7 +7,25 @@
 		<key>ColorBook2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D6A32F891FDE80EF004BDE36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6A32F9D1FDE80EF004BDE36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6A32FA81FDE80EF004BDE36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

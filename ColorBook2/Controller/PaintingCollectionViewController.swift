@@ -44,9 +44,9 @@ class PaintingCollectionViewController: UIViewController {
 //            paintingPanelVC
             if let sender = sender as? PaintingCollectionViewCell {
                 paintingPanelVC.painting = sender.painting // rm
-                
                 paintingPanelVC.paintingInd = sender.ind
                 paintingPanelVC.rawBook = rawBook
+                paintingPanelVC.delegate = self
             }
         }
     }
@@ -61,9 +61,19 @@ extension PaintingCollectionViewController: ChooseImageViewControllerDelegate {
     }
 }
 
+extension PaintingCollectionViewController: PaintingPanelDelegate {
+    func didClosed(paintingPanelViewController: PaintingPanelViewController) {
+        collectionView.reloadData()
+    }
+    func didDeleted(paintingPanelViewController: PaintingPanelViewController, index: Int) {
+        Global.painting_to_delete.append(rawBook.paintingList[index])
+        rawBook.paintingList.remove(at: index)
+        collectionView.reloadData()
+    }
+}
+
 extension PaintingCollectionViewController:
-                        UICollectionViewDataSource,
-                        UICollectionViewDelegate {
+                        UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -85,10 +95,15 @@ extension PaintingCollectionViewController:
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PaintingCollectionViewCell
+            cell.delegate = self
+//            cell.shareButton.addTarget(self, action: #selector(), for: .touchUpInside)
             let painting = rawBook.paintingList[ind-1]
             var cover: UIImage!
             if let pp = painting.painting {
                 cover = pp
+                cell.coverView.layer.borderColor = UIColor.black.cgColor
+                cell.coverView.layer.borderWidth = 2.0
+                
             } else if let pp = painting.raw {
                 cover = pp
             }
@@ -123,3 +138,23 @@ extension PaintingCollectionViewController : UICollectionViewDelegateFlowLayout 
     }
 }
 
+extension PaintingCollectionViewController: DeleteActivityDelegate {
+    func didDeleted(deleteActivity: DeleteActivity, index: Int) {
+        Global.painting_to_delete.append(rawBook.paintingList[index])
+        rawBook.paintingList.remove(at: index)
+        collectionView.reloadData()
+    }
+    func didChooseDeleteActivity(deleteActivity: DeleteActivity, alertController: UIAlertController) {
+        alertController.popoverPresentationController?.sourceView = (collectionView.cellForItem(at: IndexPath(row: deleteActivity.ind! + 1, section: 0)) as! PaintingCollectionViewCell).shareButton
+        present(alertController, animated: true, completion: nil)
+    }
+}
+
+extension PaintingCollectionViewController: PaintingCollectionViewCellDelegate {
+    func shareButtonDidTapped(paintingCollectionViewCell: PaintingCollectionViewCell, activityController: UIActivityViewController, deleteActivity: DeleteActivity) {
+        deleteActivity.delegate = self
+        self.present(activityController, animated: true, completion: nil)
+    }
+    
+    
+}

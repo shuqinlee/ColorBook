@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import SlideMenuControllerSwift
+
 
 typealias BCVC = BookCollectionViewController
 //class BookCollectionViewController: UICollectionViewController {
@@ -30,13 +30,13 @@ class BookCollectionViewController: UIViewController {
     
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow: CGFloat = 2
-
-    
+    var sideViewWidth: CGFloat!
     
     // MARK: - methods
     override func viewDidLoad() {
         title = "Books"
         collectionView.delegate = self
+        sideViewWidth = sideView.bounds.width
         
         BCVC.bookList = Realm2Raw.bookList(bookList: RealmUtil.fetchBookList())
         if BCVC.bookList.count == 0 {
@@ -47,7 +47,7 @@ class BookCollectionViewController: UIViewController {
         sideView.layer.shadowOpacity = 0.5
         sideView.layer.shadowOffset = CGSize(width: 5, height: 0)
         
-        self.viewContriant.constant = -190
+        self.viewContriant.constant = 0 - sideViewWidth
         
     }
     
@@ -85,7 +85,7 @@ class BookCollectionViewController: UIViewController {
                         })
                 }
             } else { // swipe left
-                if viewContriant.constant > -190 {
+                if viewContriant.constant > -sideViewWidth {
                     UIView.animate(withDuration: 0.2, animations: {
                         self.viewContriant.constant += translation
                         self.view.layoutIfNeeded()
@@ -94,9 +94,9 @@ class BookCollectionViewController: UIViewController {
             }
         } else if sender.state == .ended {
             
-            if self.viewContriant.constant < -100 {
+            if self.viewContriant.constant < -sideViewWidth * 0.8 {
                 UIView.animate(withDuration: 0.2, animations: {
-                    self.viewContriant.constant = -190
+                    self.viewContriant.constant = -self.sideViewWidth
                     self.view.layoutIfNeeded()
                 })
             } else {
@@ -172,16 +172,5 @@ extension BookCollectionViewController: NewBookViewControllerDelegate {
     }
 }
 
-//extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//    
-//    
-//    
-//}
+
 

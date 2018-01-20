@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_MODULES_AUTOLINK = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/EVGPUImage2" "$PODS_CONFIGURATION_BUILD_DIR/Realm" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift" "$PODS_CONFIGURATION_BUILD_DIR/SlideMenuControllerSwift"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/EFColorPicker" "$PODS_CONFIGURATION_BUILD_DIR/EVGPUImage2" "$PODS_CONFIGURATION_BUILD_DIR/Realm" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift" "$PODS_CONFIGURATION_BUILD_DIR/SwiftOverlays"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/EVGPUImage2/EVGPUImage2.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Realm/Realm.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SlideMenuControllerSwift/SlideMenuControllerSwift.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "ChameleonFramework" -framework "EVGPUImage2" -framework "Realm" -framework "RealmSwift" -framework "SlideMenuControllerSwift"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/EFColorPicker/EFColorPicker.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/EVGPUImage2/EVGPUImage2.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Realm/Realm.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftOverlays/SwiftOverlays.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Alamofire" -framework "ChameleonFramework" -framework "EFColorPicker" -framework "EVGPUImage2" -framework "Realm" -framework "RealmSwift" -framework "SwiftOverlays"
 OTHER_SWIFT_FLAGS = $(inherited) -DGLES $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

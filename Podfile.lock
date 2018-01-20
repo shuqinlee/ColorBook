@@ -1,28 +1,34 @@
 PODS:
+  - Alamofire (4.6.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - EFColorPicker (1.0.0)
   - EVGPUImage2 (0.1.0)
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
-  - SlideMenuControllerSwift (4.0.0)
+  - SwiftOverlays (4.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - ChameleonFramework/Swift
+  - EFColorPicker
   - EVGPUImage2
   - RealmSwift
-  - SlideMenuControllerSwift
+  - SwiftOverlays
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  EFColorPicker: b751df82a8aa79b0123750d569d0ed63cb2ccd91
   EVGPUImage2: 29221cf64d70ab9119dd48fc8898677b2af0c16e
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+  SwiftOverlays: dae1efb029c9401d357044dd70fd2cfce791fcb0
 
-PODFILE CHECKSUM: 16e4e9c836bedb5af5b30c270370ce4c5de14543
+PODFILE CHECKSUM: be793dcd5265c64f6e78c02fa662ceb0abc04179
 
 COCOAPODS: 1.3.1
